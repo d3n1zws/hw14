@@ -1,8 +1,11 @@
-﻿using ConsoleApp9;
-
+﻿namespace ConsoleApp9;
 public interface ICargoService
 {
-    public void AddCustomer();
-    public void AddCourier();
-    public void CreateOrder();
+    public Customer[] customers { get; }
+    public Courier[] couriers { get; }
+    public CargoOrder[] orders { get; }
+    void AddCustomer(Customer customer);
+    void AddCourier(Courier courier);
+    void CreateOrder(CargoOrder order);
+    void CompleteOrder(int id);
 }

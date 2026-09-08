@@ -1,15 +1,15 @@
 ﻿namespace ConsoleApp9
 {
-    internal class Customer
+    public class Customer
     {
-        public Customer(string id, string name, string cityName)
+        public Customer(string name, string cityName)
         {
-            Id = id;
+            Id = ++id;
             Name = name;
             CityName = cityName;
         }
-
-        public string Id { get; set; }
+        private static int id = 0;
+        public int Id { get; }
         public string Name { get; set; }
         public string CityName { get; set; }
     }

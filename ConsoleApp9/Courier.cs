@@ -4,16 +4,17 @@ using System.Text;
 
 namespace ConsoleApp9
 {
-    internal class Courier
+    public class Courier
     {
-        public Courier(string id, string name, bool isAvaliable)
+        public Courier(string name)
         {
-            Id = id;
+            Id = ++id;
             Name = name;
-            IsAvaliable = isAvaliable;
+            IsAvaliable = true;
         }
 
-        public string Id { get; set; }
+        private static int id = 0;
+        public int Id { get; }
         public string Name { get; set; }
         public bool IsAvaliable { get; set; }
     }
